@@ -275,10 +275,11 @@ class PortfolioApp {
             // Encode as URL form data
             const body = new URLSearchParams(formData).toString();
 
-            fetch('/', {
+            fetch('/?no-cache=1', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Accept': 'application/x-www-form-urlencoded'
                 },
                 body
             })
