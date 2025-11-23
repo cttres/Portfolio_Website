@@ -247,59 +247,9 @@ class PortfolioApp {
         const form = document.getElementById('contact-form');
         if (!form) return;
 
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            // Honeypot (spam check)
-            const botField = form.querySelector('input[name="bot-field"]');
-            if (botField && botField.value) {
-                // Bot detected – silently abort
-                return;
-            }
-
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn ? submitBtn.textContent : 'Sending...';
-
-            if (submitBtn) {
-                submitBtn.textContent = 'Sending...';
-                submitBtn.disabled = true;
-            }
-
-            const formData = new FormData(form);
-
-            // Make sure Netlify has the form-name field
-            if (!formData.get('form-name')) {
-                formData.append('form-name', form.getAttribute('name') || 'contact');
-            }
-
-            // Encode as URL form data
-            const body = new URLSearchParams(formData).toString();
-
-            fetch('/?no-cache=1', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                    'Accept': 'application/x-www-form-urlencoded'
-                },
-                body
-            })
-            .then((response) => {
-                if (response.ok) {
-                    this.showNotification('Message sent successfully!', 'success');
-                    form.reset();
-                } else {
-                    this.showNotification('There was a problem sending your message. Please try again.', 'error');
-                }
-            })
-            .catch(() => {
-                this.showNotification('There was a problem sending your message. Please try again.', 'error');
-            })
-            .finally(() => {
-                if (submitBtn) {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                }
-            });
+        form.addEventListener('submit', () => {
+            // Let the browser submit normally to Netlify
+            // (no preventDefault, no fetch)
         });
     }
 
