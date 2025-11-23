@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Carlos Torres</title>
+    <meta name="description" content="Detailed showcase of data science and machine learning projects by Carlos Torres.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --primary-navy: #1a1d29;
+            --secondary-blue: #00d4ff;
+            --accent-coral: #ff6b6b;
+        }
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .glass-nav {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--secondary-blue), var(--accent-coral));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .project-detail-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .tech-badge {
+            background: linear-gradient(135deg, var(--secondary-blue), #0099cc);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(24px);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-xl font-bold gradient-text">Carlos Torres</a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="projects.html" class="text-blue-300 px-3 py-2 text-sm font-medium">Projects</a>
+                        <a href="index.html#skills" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Skills</a>
+                        <a href="index.html#contact" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-24 pb-12 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in-up">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Project Portfolio</h1>
+                <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+                    Comprehensive showcase of data science and machine learning projects with real-world impact
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- GuitR AI Project -->
+            <div class="project-detail-card rounded-xl p-8 mb-12 fade-in-up">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <img src="resources/guitr-ai.png" alt="GuitR AI Interface" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">GuitR AI - Chord Recognition & Learning Assistant</h2>
+                        <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                            Built an end-to-end, full-stack machine learning application that integrates audio signal processing libraries 
+                            (Demucs, madmom) for real-time guitar chord recognition from .wav files. The system demonstrates deployment-ready 
+                            code with an interactive UI featuring synchronized chord displays, fretboard diagrams, and playback-linked feedback 
+                            to support beginner guitarists in real time.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Key Features</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Real-time audio processing and chord detection</li>
+                                <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Interactive fretboard visualization</li>
+                                <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Synchronized playback with visual feedback</li>
+                                <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Educational tool for guitar learning</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Technologies Used</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">TensorFlow</span>
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Web Audio API</span>
+                                <span class="tech-badge">Demucs</span>
+                                <span class="tech-badge">madmom</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <a href="https://github.com/cttres/guitr-ai" target="_blank" class="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors">
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bitcoin Price Prediction Project -->
+            <div class="project-detail-card rounded-xl p-8 mb-12 fade-in-up">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 lg:order-1">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Bitcoin Price Prediction - Deep Learning Analysis</h2>
+                        <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                            Developed and compared multiple deep learning models for Bitcoin price forecasting using over 600,000 historical 
+                            price records from Yahoo Finance and Kaggle. Built a robust ETL pipeline for financial time series modeling, 
+                            achieving superior results with GRU networks for short-term dependency capture in volatile cryptocurrency markets.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Model Performance</h3>
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="text-center p-4 bg-gray-50 rounded-lg">
+                                    <div class="text-2xl font-bold text-blue-600">2.34e-5</div>
+                                    <div class="text-sm text-gray-600">LSTM MSE</div>
+                                </div>
+                                <div class="text-center p-4 bg-gray-50 rounded-lg">
+                                    <div class="text-2xl font-bold text-green-600">1.93e-5</div>
+                                    <div class="text-sm text-gray-600">GRU MSE</div>
+                                </div>
+                                <div class="text-center p-4 bg-gray-50 rounded-lg">
+                                    <div class="text-2xl font-bold text-purple-600">64.5%</div>
+                                    <div class="text-sm text-gray-600">XGBoost Accuracy</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Technologies Used</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">LSTM</span>
+                                <span class="tech-badge">GRU</span>
+                                <span class="tech-badge">XGBoost</span>
+                                <span class="tech-badge">Yahoo Finance API</span>
+                                <span class="tech-badge">Pandas</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <a href="https://github.com/cttres/carlos-torres-portfolio/tree/main/Machine-Learning/Bitcoin-Prediction" target="_blank" class="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors">
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <img src="resources/ml-dashboard.png" alt="Bitcoin Prediction Dashboard" class="w-full rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forest Data Science Project -->
+            <div class="project-detail-card rounded-xl p-8 mb-12 fade-in-up">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <img src="resources/forest-data.png" alt="Forest Data Visualization" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Forest Data Science Pipeline</h2>
+                        <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                            Collaborated with USDA Forest Service to design and implement a scalable data pipeline in Python, analyzing 
+                            over 300,000 forest plot records to support large-scale ecological monitoring. Extracted, cleaned, and transformed 
+                            structured data using SQL, reducing preprocessing time by 50% and improving downstream analytical workflows.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Key Achievements</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 50% reduction in data preprocessing time</li>
+                                <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 300,000+ forest plot records analyzed</li>
+                                <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Spatial tree density analysis across geographic bins</li>
+                                <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Automated Jupyter notebooks for reproducible analysis</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Technologies Used</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">SQL</span>
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">Geospatial Analysis</span>
+                                <span class="tech-badge">Jupyter</span>
+                                <span class="tech-badge">Matplotlib</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Projects Summary -->
+            <div class="project-detail-card rounded-xl p-8 fade-in-up">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Additional Projects</h2>
+                    <p class="text-xl text-gray-600">More data science and machine learning projects showcasing diverse skills</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Employee Retention -->
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Employee Retention Prediction</h3>
+                        <p class="text-gray-600 mb-4">ML model for HR analytics with 98.5% accuracy using Random Forest and XGBoost classifiers.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Random Forest</span>
+                            <span class="tech-badge">XGBoost</span>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <strong>Accuracy:</strong> 98.5% | <strong>Precision:</strong> 0.992
+                        </div>
+                        <a href="https://github.com/cttres/carlos-torres-portfolio/tree/main/google-projects/salifort-motors-capstone" target="_blank" class="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors">
+                            View Code
+                        </a>
+                    </div>
+                    
+                    <!-- TikTok Analytics -->
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">TikTok Engagement Analytics</h3>
+                        <p class="text-gray-600 mb-4">End-to-end analytics workflow for social media content classification and engagement prediction.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">NLP</span>
+                            <span class="tech-badge">Analytics</span>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <strong>R² Score:</strong> >0.85 | <strong>Precision:</strong> ~100%
+                        </div>
+                        <a href="https://github.com/cttres/carlos-torres-portfolio/tree/main/tiktok-labs" target="_blank" class="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors">
+                            View Code
+                        </a>
+                    </div>
+                    
+                    <!-- News Classification -->
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">News Classification System</h3>
+                        <p class="text-gray-600 mb-4">Text classification comparing traditional ML with BERT transformer models on 2,225 news articles.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">BERT</span>
+                            <span class="tech-badge">NLP</span>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <strong>Accuracy:</strong> 98.5% | <strong>Articles:</strong> 2,225
+                        </div>
+                        <a href="https://github.com/cttres/carlos-torres-portfolio/tree/main/Machine-Learning/Text-Classification" target="_blank" class="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors">
+                            View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-in-up">
+                <h2 class="text-3xl font-bold mb-6">Interested in Collaborating?</h2>
+                <p class="text-xl text-gray-200 mb-8">
+                    Let's discuss how we can work together on your next data science project
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html#contact" class="px-8 py-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-semibold">
+                        Get In Touch
+                    </a>
+                    <a href="index.html" class="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors font-semibold">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-300">
+                    © 2025 Carlos Torres. Built with modern web technologies and data-driven design principles.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize animations when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        anime({
+                            targets: entry.target,
+                            translateY: [24, 0],
+                            opacity: [0, 1],
+                            duration: 600,
+                            easing: 'easeOutQuart'
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
